@@ -22,5 +22,10 @@ public void triangulo(double area, double perimetro, double base, double altura,
         System.out.println("El área del triangulo es: "+area);
         System.out.println("\nEl perimetro del triangulo es: "+perimetro);
 }
-
+public void rectangulo(double area, double perimetro, double base, double lado){
+area=base*lado;
+perimetro= 2*lado+2*base;
+    System.out.println("El área del rectangulo es: "+area);
+    System.out.println("\nEl perímetro del rectangulo es: "+perimetro);
+}
 }
