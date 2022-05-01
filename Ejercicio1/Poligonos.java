@@ -16,5 +16,11 @@ public void cuadrado (double area, double perimetro, double lado){
         System.out.println("El área del cuadrado es: "+area);
         System.out.println("\nEl perímetro del cuadrado es: "+perimetro);
 }
+public void triangulo(double area, double perimetro, double base, double altura, double lado){
+    area=base*altura/2;
+    perimetro=lado+lado+lado;
+        System.out.println("El área del triangulo es: "+area);
+        System.out.println("\nEl perimetro del triangulo es: "+perimetro);
+}
 
 }
