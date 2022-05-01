@@ -12,19 +12,19 @@ public Poligonos(double area, double perimetro) {
 }
 public void cuadrado (double area, double perimetro, double lado){
     area=Math.pow(lado, 2);
-    perimetro=4*lado;
+    perimetro=(4)*(lado);
         System.out.println("El área del cuadrado es: "+area);
         System.out.println("\nEl perímetro del cuadrado es: "+perimetro);
 }
 public void triangulo(double area, double perimetro, double base, double altura, double lado){
-    area=base*altura/2;
+    area=((base*altura)/2);
     perimetro=lado+lado+lado;
         System.out.println("El área del triangulo es: "+area);
         System.out.println("\nEl perimetro del triangulo es: "+perimetro);
 }
 public void rectangulo(double area, double perimetro, double base, double lado){
 area=base*lado;
-perimetro= 2*lado+2*base;
+perimetro= ((2*lado)+(2*base));
     System.out.println("El área del rectangulo es: "+area);
     System.out.println("\nEl perímetro del rectangulo es: "+perimetro);
 }
