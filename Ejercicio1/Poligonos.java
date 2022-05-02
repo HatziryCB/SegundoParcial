@@ -2,30 +2,54 @@ package Ejercicio1;
 
 public class Poligonos extends FigurasGeometricas{
     private double perimetro;
-    private double base;
-    private double altura;
-    private double lado;
+    private final double base;
+    private final double altura;
+    private final double lado;
 
-public Poligonos(double area, double perimetro) {
+//Constructor
+public Poligonos(double area, double perimetro, double base, double altura, double lado) {
     super(area);
     this.perimetro=perimetro;
+    this.base=base;
+    this.altura=altura;
+    this.lado=lado;
 }
-public void cuadrado (double area, double perimetro, double lado){
+//Apicando sobre carga de metodos
+public double area (double lado){
     area=Math.pow(lado, 2);
+            System.out.println("\nEl área del cuadrado es: "+getArea());
+            return getArea();
+}
+//Aplicando sobre carga de metodos
+public double perimetro(double lado){
     perimetro=(4)*(lado);
-        System.out.println("El área del cuadrado es: "+area);
-        System.out.println("\nEl perímetro del cuadrado es: "+perimetro);
+    System.out.println("\nEl perímetro del cuadrado es: "+getPerimetro());
+    return getPerimetro();
 }
-public void triangulo(double area, double perimetro, double base, double altura, double lado){
+
+public double areaTriangulo(double base, double altura){
     area=((base*altura)/2);
-    perimetro=lado+lado+lado;
-        System.out.println("El área del triangulo es: "+area);
-        System.out.println("\nEl perimetro del triangulo es: "+perimetro);
+    System.out.println("El área del triangulo es: "+getArea());
+    return getArea();
 }
-public void rectangulo(double area, double perimetro, double base, double lado){
-area=base*lado;
-perimetro= ((2*lado)+(2*base));
-    System.out.println("El área del rectangulo es: "+area);
-    System.out.println("\nEl perímetro del rectangulo es: "+perimetro);
+public double perimetroTriangulo(double lado, double base){
+    perimetro=2*lado+base;
+    System.out.println("\nEl perimetro del triangulo es: "+getPerimetro());
+    return getPerimetro();
 }
+//Aplicando sobre carga de metodos
+public double area(double base, double lado){
+    area=base*lado;
+        System.out.println("El área del rectangulo es: "+getArea());    
+        return getArea();
+}
+//Aplicando sobre carga de metodos
+public double perimetro(double lado, double base){
+    perimetro= ((2*lado)+(2*base));
+        System.out.println("\nEl perímetro del rectangulo es: "+getPerimetro());
+        return getPerimetro();
+}
+    public double getPerimetro() {
+        return perimetro;
+    }
 }
